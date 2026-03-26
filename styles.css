@@ -1,0 +1,160 @@
+
+      /* Global Styles */
+      :root {
+         --primary: #6366f1;
+         --primary-dark: #4f46e5;
+         --primary-light: #7c5cff;
+         --bg: #020617;
+         --surface: rgba(255,255,255,0.03);
+         --surface-border: 1px solid rgba(255,255,255,0.07);
+         --text-primary: #f1f5f9;
+         --text-muted: #64748b;
+         --accent: #3b82f6;
+         --success: #10b981;
+         --danger: #ef4444;
+         --radius: 1rem;
+         --radius-sm: 0.75rem;
+         --radius-xs: 0.5rem;
+      }
+
+      /* Global Reset */
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      /* Body Styles */
+      body {
+         font-family: 'Inter', sans-serif;
+         background-color: var(--bg);
+         color: var(--text-primary);
+         line-height: 1.6;
+      }
+
+      /* Scrollbar Styles */
+      ::-webkit-scrollbar {
+         width: 10px;
+         height: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background-color: var(--primary);
+         border-radius: var(--radius-xs);
+      }
+
+      ::-webkit-scrollbar-track {
+         background-color: var(--bg);
+      }
+
+      /* Keyframe Animations */
+      @keyframes fadeIn {
+         from {
+            opacity: 0;
+         }
+         to {
+            opacity: 1;
+         }
+      }
+
+      @keyframes slideUp {
+         from {
+            transform: translateY(100px);
+         }
+         to {
+            transform: translateY(0);
+         }
+      }
+
+      @keyframes pulse {
+         from {
+            transform: scale(1);
+         }
+         50% {
+            transform: scale(1.1);
+         }
+         to {
+            transform: scale(1);
+         }
+      }
+
+      @keyframes glow {
+         from {
+            box-shadow: 0 0 10px rgba(99,102,241,0.1);
+         }
+         to {
+            box-shadow: 0 0 20px rgba(99,102,241,0.2);
+         }
+      }
+
+      /* Hero Section Styles */
+      .hero-section {
+         height: 100vh;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: var(--bg);
+      }
+
+      /* Login Form Styles */
+      .login-form {
+         background-color: var(--surface);
+         border: var(--surface-border);
+         padding: 2rem;
+         border-radius: var(--radius);
+         box-shadow: 0 0 10px rgba(0,0,0,0.1);
+         animation: fadeIn 0.5s ease-in-out;
+      }
+
+      /* Input Field Styles */
+      .input-field {
+         margin-bottom: 1rem;
+         padding: 0.5rem;
+         border: none;
+         border-radius: var(--radius-xs);
+         background-color: var(--surface);
+         color: var(--text-primary);
+         transition: all 0.2s ease-in-out;
+      }
+
+      .input-field:focus {
+         box-shadow: 0 0 10px rgba(99,102,241,0.2);
+      }
+
+      /* Login Button Styles */
+      .login-button {
+         background-color: var(--primary);
+         color: var(--text-primary);
+         padding: 0.5rem 1rem;
+         border: none;
+         border-radius: var(--radius-sm);
+         cursor: pointer;
+         transition: all 0.2s ease-in-out;
+      }
+
+      .login-button:hover {
+         background-color: var(--primary-dark);
+      }
+
+      /* Glass Morphism Styles */
+      .glass {
+         backdrop-filter: blur(20px);
+         background-color: rgba(255,255,255,0.04);
+         border: 1px solid rgba(255,255,255,0.08);
+         padding: 1rem;
+         border-radius: var(--radius);
+      }
+
+      /* Responsive Breakpoints */
+      @media (max-width: 768px) {
+         .hero-section {
+            height: 50vh;
+         }
+      }
+
+      @media (max-width: 480px) {
+         .login-form {
+            padding: 1rem;
+         }
+      }
+   
